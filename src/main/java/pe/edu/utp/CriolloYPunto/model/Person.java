@@ -9,6 +9,7 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 
@@ -17,6 +18,8 @@ import lombok.Setter;
 @Inheritance(strategy=InheritanceType.JOINED)
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 
 public abstract class Person {
     @Id
