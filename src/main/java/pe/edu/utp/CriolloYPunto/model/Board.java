@@ -12,23 +12,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "menu_category")
+@Table(name = "board")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MenuCategory {
+public class Board {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "menu_category_id")
-  private Integer menuCategoryId;
+  @Column(name = "board_id")
+  private Integer boardId;
 
-  @Column(name = "name", unique = true, nullable = false)
-  private String name;
+  @Column(name = "number", unique = true, nullable = false)
+  private String number;
 
-  @Column(name = "description")
-  private String description;
+  @Column(name = "available", nullable = false)
+  private boolean available;
 
-  @Column(name = "image")
-  private String image;
+  @Column(name = "capacity", nullable = false)
+  private Integer capacity;
 }

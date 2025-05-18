@@ -1,10 +1,15 @@
 package pe.edu.utp.CriolloYPunto.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,23 +17,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "menu_category")
+@Table(name = "order_item")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MenuCategory {
+public class OrderItem {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "menu_category_id")
-  private Integer menuCategoryId;
+  @Column(name = "order_item_id")
+  private Integer orderItemId;
 
-  @Column(name = "name", unique = true, nullable = false)
-  private String name;
+  @Column(name = "quantity", nullable = false)
+  private Integer quantity;
 
   @Column(name = "description")
   private String description;
 
-  @Column(name = "image")
-  private String image;
+  @ManyToOne
+  @JoinColumn(name = "menu_item_id")
+  @OnDelete(action = OnDeleteAction.SET_NULL)
+  private MenuItem menuItem;
 }
