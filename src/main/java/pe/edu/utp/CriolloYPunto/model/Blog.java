@@ -17,10 +17,10 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "blog_id")
-    private Integer boardId;
+    private Integer blogId;
 
     @Column(name = "date", nullable = false)
-    private LocalDate number;
+    private LocalDate date;
 
     @Column(name = "time", nullable = false)
     private LocalTime time;

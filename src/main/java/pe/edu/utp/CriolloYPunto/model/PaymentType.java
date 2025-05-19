@@ -4,20 +4,19 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "invoice")
+@Table(name = "payment_type")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Invoice {
+public class PaymentType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "invoice_id")
-    private Integer invoiceId;
+    @Column(name = "payment_type")
+    private Integer paymentTypeId;
 
-    @ManyToOne
-    @JoinColumn(name = "juridical_person_id")
-    private JuridicalPerson juridicalPerson;
+    @Column(name = "name")
+    private String name;
 
 }

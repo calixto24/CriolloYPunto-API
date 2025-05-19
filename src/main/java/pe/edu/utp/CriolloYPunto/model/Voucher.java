@@ -19,7 +19,7 @@ public class Voucher {
     private Integer voucherId;
 
     @Column(name = "date", nullable = false)
-    private LocalDate number;
+    private LocalDate date;
 
     @Column(name = "time", nullable = false)
     private LocalTime time;
@@ -28,13 +28,13 @@ public class Voucher {
     private Double taxed;
 
     @Column(name = "total_price", nullable = false)
-    private Double total_price;
+    private Double totalPrice;
 
     @Column(name = "discount")
     private Double discount;
 
     @Column(name = "additional_payments")
-    private Double additional_payments;
+    private Double additionalPayments;
 
     @Column(name = "igv", nullable = false)
     private Double igv;
@@ -44,6 +44,10 @@ public class Voucher {
 
     @Column(name = "turned")
     private double turned;
+
+    @ManyToOne
+    @JoinColumn(name = "payment_type_id")
+    private PaymentType paymentType;
 
     @OneToOne
     @JoinColumn(name = "order_id")
