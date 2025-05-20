@@ -23,13 +23,13 @@ public class JuridicalCustomer extends Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "juridical_customer_id")
-    private Integer juridical_Customer_Id;
+    private Integer juridicalCustomerId;
 
     @Column(name = "ruc", length = 11, nullable = false, unique = true)
     private String ruc;
 
-    @Column(name = "company_name", length = 100, nullable = false)
-    private String companyName;
+    @Column(name = "social_reasson", length = 100, nullable = false)
+    private String socialReasson;
 
     @Column(name = "type")
     private String type;

@@ -32,11 +32,11 @@ public class NaturalCustomer extends Person {
     @Column(name = "name", length = 100, nullable = false)
     private String name;
 
-    @Column(name = "paternal_lastname", length = 100, nullable = false)
-    private String paternalLastname;
+    @Column(name = "paternal_last_name", length = 100, nullable = false)
+    private String paternalLastName;
 
-    @Column(name = "maternal_lastname", length = 100, nullable = false)
-    private String maternalLastname;
+    @Column(name = "maternal_last_name", length = 100, nullable = false)
+    private String maternalLastName;
 
     @Column(name = "birthdate", nullable = false)
     private LocalDate birthdate;

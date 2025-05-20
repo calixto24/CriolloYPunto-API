@@ -24,13 +24,13 @@ public abstract class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "person_id")
-    private Integer person_Id;
+    private Integer personId;
 
     @Column(name = "addres", length = 100)
     private String address;
 
     @Column(name = "phone_number", length = 9, unique = true)
-    private String phone_Number;
+    private String phoneNumber;
 
     @Column(name = "email", unique = true, length = 100)
     private String email;

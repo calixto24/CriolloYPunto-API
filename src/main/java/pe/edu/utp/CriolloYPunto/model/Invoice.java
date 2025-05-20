@@ -1,5 +1,8 @@
 package pe.edu.utp.CriolloYPunto.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,7 +12,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Invoice {
+public class Invoice extends Voucher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +21,7 @@ public class Invoice {
 
     @ManyToOne
     @JoinColumn(name = "juridical_customer_id")
+    @OnDelete(action = OnDeleteAction.SET_NULL)
     private JuridicalCustomer juridicalCustomer;
 
 }

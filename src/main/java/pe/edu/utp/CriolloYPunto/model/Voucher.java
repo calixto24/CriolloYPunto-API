@@ -7,6 +7,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "voucher")
+@Inheritance(strategy=InheritanceType.JOINED)
 @Getter
 @Setter
 @AllArgsConstructor
@@ -31,7 +32,7 @@ public class Voucher {
     private Double totalPrice;
 
     @Column(name = "discount")
-    private Double discount;
+    private Double discount = null;
 
     @Column(name = "additional_payments")
     private Double additionalPayments;

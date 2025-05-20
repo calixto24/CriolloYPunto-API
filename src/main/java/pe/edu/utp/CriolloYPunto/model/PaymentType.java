@@ -13,7 +13,7 @@ public class PaymentType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "payment_type")
+    @Column(name = "payment_type_id")
     private Integer paymentTypeId;
 
     @Column(name = "name")
