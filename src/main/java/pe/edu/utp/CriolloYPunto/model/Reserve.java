@@ -38,6 +38,6 @@ public class Reserve {
     @ManyToOne
     @JoinColumn(name = "dni")
     @OnDelete(action = OnDeleteAction.SET_NULL)
-    private NaturalPerson naturalPerson;
+    private NaturalCustomer naturalCustomer;
 
 }

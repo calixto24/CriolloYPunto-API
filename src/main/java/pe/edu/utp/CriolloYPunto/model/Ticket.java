@@ -18,6 +18,6 @@ public class Ticket extends Voucher {
 
     @ManyToOne
     @JoinColumn(name = "natural_customer_id")
-    private NaturalPerson naturalPerson;
+    private NaturalCustomer naturalCustomer;
 
 }

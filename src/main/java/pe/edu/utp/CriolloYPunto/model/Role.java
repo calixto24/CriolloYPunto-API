@@ -1,6 +1,5 @@
 package pe.edu.utp.CriolloYPunto.model;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,19 +16,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="role")
+@Table(name = "role")
 public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name ="role_id")
+    @Column(name = "role_id")
     private Integer roleId;
 
-    @Column(name="name" ,length = 50 , nullable = false)
+    @Column(name = "name", length = 50, nullable = false)
     private String name;
 
-
-    
-
-    
 }

@@ -1,10 +1,15 @@
 package pe.edu.utp.CriolloYPunto.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,5 +34,10 @@ public class User {
 
     @Column(name="password",length = 100 , unique = true , nullable = false)
     private String password;
+
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    @OnDelete(action = OnDeleteAction.SET_NULL)
+    private Role role;
 
 }

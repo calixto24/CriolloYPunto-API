@@ -17,7 +17,7 @@ public class Invoice {
     private Integer invoiceId;
 
     @ManyToOne
-    @JoinColumn(name = "juridical_person_id")
-    private JuridicalPerson juridicalPerson;
+    @JoinColumn(name = "juridical_customer_id")
+    private JuridicalCustomer juridicalCustomer;
 
 }
