@@ -36,7 +36,7 @@ public class Reserve {
     private Board board;
 
     @ManyToOne
-    @JoinColumn(name = "dni")
+    @JoinColumn(name = "natural_customer_id")
     @OnDelete(action = OnDeleteAction.SET_NULL)
     private NaturalCustomer naturalCustomer;
 

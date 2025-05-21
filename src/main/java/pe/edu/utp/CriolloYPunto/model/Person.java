@@ -26,7 +26,7 @@ public abstract class Person {
     @Column(name = "person_id")
     private Integer personId;
 
-    @Column(name = "addres", length = 100)
+    @Column(name = "address", length = 100)
     private String address;
 
     @Column(name = "phone_number", length = 9, unique = true)

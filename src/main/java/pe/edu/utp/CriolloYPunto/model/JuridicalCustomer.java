@@ -20,10 +20,7 @@ import lombok.Setter;
 @Table(name = "juridical_customer")
 public class JuridicalCustomer extends Person {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "juridical_customer_id")
-    private Integer juridicalCustomerId;
+
 
     @Column(name = "ruc", length = 11, nullable = false, unique = true)
     private String ruc;

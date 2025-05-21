@@ -21,13 +21,9 @@ import lombok.Setter;
 @Table(name = "natural_customer")
 public class NaturalCustomer extends Person {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "natural_customer_id")
-    private Integer natural_Customer_Id;
     
     @Column(name = "dni", length = 8, unique = true, nullable = false)
-    private Integer dni;
+    private String dni;
 
     @Column(name = "name", length = 100, nullable = false)
     private String name;
