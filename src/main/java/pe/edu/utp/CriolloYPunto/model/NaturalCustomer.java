@@ -20,7 +20,6 @@ import lombok.Setter;
 
 @Table(name = "natural_customer")
 public class NaturalCustomer extends Person {
-
     
     @Column(name = "dni", length = 8, unique = true, nullable = false)
     private String dni;

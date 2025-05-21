@@ -12,7 +12,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Voucher {
+public abstract class Voucher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

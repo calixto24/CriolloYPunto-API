@@ -14,11 +14,6 @@ import lombok.*;
 @NoArgsConstructor
 public class Ticket extends Voucher {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ticket_id")
-    private Integer ticketId;
-
     @ManyToOne
     @JoinColumn(name = "natural_customer_id")
     @OnDelete(action = OnDeleteAction.SET_NULL)

@@ -14,11 +14,6 @@ import lombok.*;
 @NoArgsConstructor
 public class Invoice extends Voucher {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "invoice_id")
-    private Integer invoiceId;
-
     @ManyToOne
     @JoinColumn(name = "juridical_customer_id")
     @OnDelete(action = OnDeleteAction.SET_NULL)

@@ -21,7 +21,6 @@ import lombok.Setter;
 public class JuridicalCustomer extends Person {
 
 
-
     @Column(name = "ruc", length = 11, nullable = false, unique = true)
     private String ruc;
 
